@@ -1,0 +1,209 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Play);
+.reveal-modal{
+	left:75%;
+	width: 30%;
+}
+.header-middle{
+	background: url(5.jpg) no-repeat scroll center center /cover;
+	height: 800px;
+	
+	.logo{
+		margin-top: 13px;
+		img{
+			margin-left: 30px;
+		}
+		.small-logo{
+			p{
+				color:#fff;
+			}
+		}
+	}
+	.login{
+		margin-top: 47px;
+		float:right;
+		a{
+			&:hover{
+				opacity: 0.6;
+			}
+			.login-btn{
+				border-radius:3px;
+				border: 1px solid #fff;
+				font-family: 'Play', sans-serif;
+			}
+		}
+	}
+}
+.row{
+.control-middle-header{
+	margin-top: 250px;
+}
+}
+
+.control-body-content{
+		margin-top: 50px;
+		margin-bottom: 50px;
+		
+		img{
+			border-radius: 100px;
+			border:5px solid #999;
+			opacity:0.8;
+			&:hover{
+				opacity:1;
+			}
+		}
+	.large-4{
+		padding-left:20px;
+		padding-right:60px;
+		padding-bottom:10px;
+		border-left:3px solid #aaa;
+		height: auto;
+		h5{
+			color:#444;
+			font-family: 'Play', sans-serif;
+		}
+		p{
+			color:#777;
+			font-size:13px;
+		}
+	}
+	.large-4:first-child{
+		border-left: 3px solid #D05647;
+		
+	}
+	.large-4:last-child{
+		padding-right:0px;
+		border-left: 3px solid #15A0D5;
+	}
+}
+hr{
+	margin-top:50px;
+}
+.row{
+
+.large-9{
+	h2{
+		font-size:30px;
+		color:#444;
+		font-family: 'Play', sans-serif;
+	}
+	p{
+		color:#777;
+		font-size:14px;
+	}
+}
+}
+.middle-body{
+	// background: url(mood.jpg) repeat-x scroll 0px 0px/cover;
+		height: 250px;
+		padding-top: 50px;
+		background: #3598DC;
+		.large-9{
+			h2{
+				text-align: center;
+				color:#fff;
+				font-size:3.5rem;
+				font-family: 'Play', sans-serif;
+			}
+		}
+}
+
+.mar-top{
+	margin-top:50px;
+}
+.mar-bot{
+	margin-bottom: 50px;	
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 40em) {
+	hr{
+		margin-top:20px;
+	}
+	.reveal-modal{
+		top:25%;
+	left:5%;
+	right:5%;
+	width: 90%;
+	min-height: 35vh;
+	}
+	.row{
+		.control-middle-header{
+			margin-top: 150px;
+		}
+	}
+
+	.row{
+		.large-9{
+			margin-top:0px;
+			.control-body-content{
+				margin-bottom: 0px;
+				margin-top:25px;
+				padding:20px; 
+				h2{
+					color:#13A9E1;
+					font-size:1.5em;
+				}
+			}
+		}
+	}
+
+	.control-body-content{
+				margin-top:30px;
+				.small-12{
+					height: 140px;
+					padding-right: 25px;
+					h5{
+						color:#13A9E1;
+					}
+				}
+	}
+
+.control-middle-header{
+	.title{
+		h2{
+			font-weight: bold;
+			font-size: 1em;
+			font-weight: bold;
+		}
+	}
+}
+.middle-body{
+	margin-top:0px;
+	height: 250px;
+	.small-12{
+		margin-top:20px;
+		h2{
+			margin-top:0px;
+			font-size: 1.6rem;
+			font-weight: bold;
+			a{
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+}
+
+
+
+
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+	.reveal-modal{
+		top:25%;
+		left:68%;
+		width: 45%;
+		min-height: 35vh;
+	}
+
+
+}

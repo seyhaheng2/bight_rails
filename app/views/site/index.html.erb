@@ -1,0 +1,95 @@
+<div class="row">
+<div id="myModal" class="reveal-modal" data-reveal> 
+<h5 style="color:#888;margin-top:0px;">Member login</h5>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div><%= f.email_field :email, autofocus: true,placeholder: "Email" %></div>
+
+<div class=""><%= f.password_field :password, autocomplete: "off",placeholder: "Password confirmation" %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in", class: "button twitter expand radius", style: "margin-bottom:0px;" %></div>
+<% end %>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<header class="header-middle">
+<div class="row">
+<div class="large-12 columns">
+	<div class="small-6 columns">
+	<div class="logo">
+	<%= link_to root_path do %>
+		<%= image_tag "qq.png",size: "30" %>
+		<div class="small-logo">
+			<p>Bright of rails</p>	
+		</div>
+	<% end %>
+	</div>
+	</div>
+	<div class="small-6 columns">
+	<div class="login">
+	<a href="#" data-reveal-id="myModal" style="border:1px solid #fff;padding:8px 19px;color:#fff;border-radius:3px;">Login</a>
+		<%#= link_to "Login", new_user_session_path, class: "login-btn", style: "border:1px solid #fff;padding:8px 19px;color:#fff;border-radius:3px;" %>
+	</div>
+	</div>
+</div>
+</div>
+<div class="row">
+<div class="control-middle-header">
+	<div class="large-12 medium-12 columns">
+	<div class="title"><h2 style="text-align: center;color:#fff;margin-bottom:30px;font-family: 'Play', sans-serif;">Register with account you have before.</h2></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-facebook fa-2x"></i> &nbsp;&nbsp; Register with Facebook'.html_safe, root_path, class: "facebook button expand radius"%></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-google-plus fa-2x"></i> &nbsp;&nbsp; Register with Google'.html_safe, root_path, class: "google button expand radius" %></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-twitter fa-2x"></i> &nbsp;&nbsp; Register with Twitter'.html_safe, root_path, class: "twitter button expand radius" %></div>
+	</div>
+</div>
+<div class="large-4 medium-5 large-centered text-center medium-centered columns">
+		<%= link_to "Register with email",root_path, style: "font-size:0.8em;" %>
+	</div>
+</div>
+</header>
+<div class="row">
+	<div class="large-12 small-12 medium-12 columns">
+	<div class="control-body-content">
+		<div class="large-4 small-12 medium-4 columns">
+			<h5>Learn with video tutorails</h5>
+			<p>You will get something new from me about Web Design and Web Developer, All you need just login you will see what u want to learn and what you want to build. try with me for our future.</p>
+		</div>
+		<div class="large-4 small-12 medium-4 columns">
+			<h5>Working on your devices</h5>
+			<p>All your discoveries are stored in the cloud, so you can easily access them from anywhere, be it on your desktop, phone or tablet.</p>
+		</div>
+		<div class="large-4 small-12 medium-4 columns">
+			<h5>Why learn Ruby on Rails.</h5>
+			<p>Rails is Web Framework fast and easy.
+			   Rails was created in 2003 by <small style="font-size:1.1em;color:#3598DC;">David Heinemeier Hansson.</small></p>
+		</div>
+	</div>	
+	</div>
+</div>	
+<hr style="margin-bottom: 0px;">
+<div class="row">
+	<div class="large-9 medium-8 large-centered medium-centered columns text-center">
+	<div class="control-body-content">
+		<%= image_tag "gg.png",size:"130" %>
+		<h2>Find topic you learn.</h2>
+		<p>Everything you learn with this tutorails from <%= link_to "Bright of Rails.", root_path,style: "color:#3598DC;" %> I hope u guys can did it after watch this tutorails.  And if You got a problem can contact with <%= link_to " Sino.", root_path,style: "color:#3598DC;" %> Don't forget try to study if you want to get a better job for your life. I will try to find something new for shared with you.</p>
+	</div>
+	</div>
+</div>
+<div class="middle-body">
+	<div class="large-9 medium-10 small-12 small-centered large-centered medium-centered columns">
+		<h2>Get login to learn with us Please...</h2>
+		<div class="large-5 small-9 small-centered large-centered medium-6 medium-centered columns">
+		<%= link_to "Register", root_path, class: "button expand xing radius ",style: "background:#fff;color:#13A9E1;margin-top:20px;font-family: 'Play', sans-serif;" %>
+		</div>
+	</div>
+</div>
