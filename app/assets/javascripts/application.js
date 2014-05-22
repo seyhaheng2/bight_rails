@@ -14,6 +14,31 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require masonry/jquery.masonry
+//= require tinymce-jquery
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function() {
+    $(document).foundation();
+});
+
+$(document).ready(function() {
+    // Target your .container, .wrapper, .post, etc.
+    $(".show-box").fitVids();
+});
+
+
+// jQuery(document).ready(function() {
+//     var $container = $('.box-content');
+//     $container.imagesLoaded(function() {
+//         $container.masonry({
+//             itemSelector: '.box',
+//             isAnimated: true,
+//             animationOptions: {
+//                 duration: 650,
+//                 easing: 'linear',
+//                 queue: true
+//             }
+//         });
+//     });
+// })

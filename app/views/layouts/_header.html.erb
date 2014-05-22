@@ -1,0 +1,26 @@
+  <% if user_signed_in? %>
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to root_path do %>
+         		<%= image_tag "qq.png",size: "20" %> <small style="color:#fff;margin-top:10px;font-size:0.8em;font-weight:bold;"> Bright of Rails</small>
+			<% end %>
+         </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"></a></li>
+    </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><%= link_to '<i class="fa fa-film" style="font-size:14px;padding-top:10px;"></i> Library'.html_safe %></li>
+      <li style="padding-left: 0px;"><%= link_to '<i class="fa fa-book" style="font-size:16px;padding-top:10px;padding-left:0px;"></i> Course'.html_safe, courses_path %></li>
+    </ul>
+    <ul class="right">
+      <li><%= image_tag current_user.image,size: "35" ,style: "margin-top:5px;position:relative;"%></li>
+      <li style="text-transform: capitalize;"><%= link_to current_user.name, style: "margin-top:5px;padding:0px;text-transform: capitalize;" %></li>
+      <li><%= link_to '<i class="fa fa-power-off" style="font-size:16px;padding-top:10px;"></i> Log out'.html_safe, destroy_user_session_path, method: :delete %></li>
+    </ul>
+  </section>
+</nav>
+<% end %>

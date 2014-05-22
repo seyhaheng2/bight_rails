@@ -21,6 +21,14 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+  require "omniauth-facebook"
+  require 'omniauth-twitter'
+  config.omniauth :twitter ,"MbGeLmctAF3zoVaa2OiEQ", "LGoArSEvXyXEVxIoa8QYyrCz7tkhauSv4n0QPhRPeg"
+
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, "215685494596.apps.googleusercontent.com", "MeQgQWJtIILDR24vYTuK2h0T", { access_type: "offline", approval_prompt: "" }
+  
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
@@ -47,6 +55,7 @@ Devise.setup do |config|
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [ :email ]
+
 
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
@@ -253,4 +262,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+   config.omniauth :facebook, "1457007541189777", "c9e8856993a3ae75e3b1ce11ce083d25"
 end

@@ -11,6 +11,17 @@ gem 'fog'
 gem 'better_errors'
 gem 'devise'
 gem "font-awesome-rails"
+gem 'fog'
+gem 'aws-sdk'
+gem 'mini_magick'
+gem 'tinymce-rails'
+gem 'will_paginate-foundation'
+gem 'masonry-rails'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

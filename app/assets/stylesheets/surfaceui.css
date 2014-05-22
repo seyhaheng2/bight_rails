@@ -361,7 +361,7 @@ section.footer                          {
 
 
 a                                       {
-                                            color: #FFF;
+                                            /*color: #FFF;*/
                                             text-decoration: none;
                                             -webkit-transition: 0.25s;
                                             transition: 0.25s;
@@ -369,7 +369,6 @@ a                                       {
 
 a:hover                                 {
                                             cursor: pointer;
-                                            color: #FFF;
                                             text-decoration: none;
                                         }
 

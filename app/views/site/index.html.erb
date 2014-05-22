@@ -1,3 +1,46 @@
+<% if user_signed_in?  %>
+
+<div class="wrapper">
+	<div class="large-3 columns">
+		<div class="box-side"></div>
+	</div>
+	<div class="large-10 columns" style="margin-top:30px;">
+			<% @courses.each do |c|  %>
+				<%= link_to site_show_path(course_id: c) do%>
+					<div class="box">
+						<div class="image-c"><%= image_tag (c.image.url(:normal)) %></div> 
+						<div class="small-content">
+							<div class="name-c"><%= truncate(c.title,length: 18)%></div>
+							<div class="des-c" style="line-height: 1.5;"><%= truncate(c.description.html_safe, length: 160) %></div>
+							<div class="des-c-small" style="line-height: 1.5;"><%= truncate(c.description.html_safe, length: 50) %></div>
+						</div> 
+					</div>
+				<% end %>
+			<% end %>
+			<!-- <div class="large-12 columns large-centered medium-centered small-centered"> -->
+				<div class="pagination-centered">
+					<%= will_paginate @courses, renderer: FoundationPagination::Rails %>
+				</div>
+			<!-- </div>	 -->
+	</div>
+</div>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% else %>
 <div class="row">
 <div id="myModal" class="reveal-modal" data-reveal> 
 <h5 style="color:#888;margin-top:0px;">Member login</h5>
@@ -29,7 +72,7 @@
 	<%= link_to root_path do %>
 		<%= image_tag "qq.png",size: "30" %>
 		<div class="small-logo">
-			<p>Bright of rails</p>	
+			<p style="font-family: 'Play', sans-serif;">Bright of rails</p>	
 		</div>
 	<% end %>
 	</div>
@@ -46,14 +89,14 @@
 <div class="control-middle-header">
 	<div class="large-12 medium-12 columns">
 	<div class="title"><h2 style="text-align: center;color:#fff;margin-bottom:30px;font-family: 'Play', sans-serif;">Register with account you have before.</h2></div>
-		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-facebook fa-2x"></i> &nbsp;&nbsp; Register with Facebook'.html_safe, root_path, class: "facebook button expand radius"%></div>
-		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-google-plus fa-2x"></i> &nbsp;&nbsp; Register with Google'.html_safe, root_path, class: "google button expand radius" %></div>
-		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-twitter fa-2x"></i> &nbsp;&nbsp; Register with Twitter'.html_safe, root_path, class: "twitter button expand radius" %></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-facebook fa-2x"></i> &nbsp;&nbsp; Register with Facebook'.html_safe, user_omniauth_authorize_path(:facebook), class: "facebook button expand radius"%></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-twitter fa-2x"></i> &nbsp;&nbsp; Register with Twitter'.html_safe, user_omniauth_authorize_path(:twitter), class: "twitter button expand radius" %></div>
+		<div class="large-4 small-12 medium-4 columns"><%= link_to '<i class="fa fa-google-plus fa-2x"></i> &nbsp;&nbsp; Register with Google'.html_safe, user_omniauth_authorize_path(:google_oauth2), class: "google button expand radius" %></div>
 	</div>
 </div>
-<div class="large-4 medium-5 large-centered text-center medium-centered columns">
-		<%= link_to "Register with email",root_path, style: "font-size:0.8em;" %>
-	</div>
+	<!-- <div class="large-4 medium-5 large-centered text-center medium-centered columns">
+		<%#= link_to "Register with email",root_path, style: "font-size:0.8em;font-family: 'Play', sans-serif;" %>
+	</div> -->
 </div>
 </header>
 <div class="row">
@@ -87,9 +130,10 @@
 </div>
 <div class="middle-body">
 	<div class="large-9 medium-10 small-12 small-centered large-centered medium-centered columns">
-		<h2>Get login to learn with us Please...</h2>
+		<h2>Get login to learn with us</h2>
 		<div class="large-5 small-9 small-centered large-centered medium-6 medium-centered columns">
 		<%= link_to "Register", root_path, class: "button expand xing radius ",style: "background:#fff;color:#13A9E1;margin-top:20px;font-family: 'Play', sans-serif;" %>
 		</div>
 	</div>
 </div>
+<% end %>
